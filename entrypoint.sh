@@ -21,7 +21,7 @@ git lfs install
 # publish any new files
 git checkout dev
 git add -A
-timestamp=$(date -u)
-git commit -m "Automated publish: ${timestamp} ${GITHUB_SHA}" || exit 0
+lastCommit=$(git log -1 --pretty=%B)
+git commit -m "${lastCommit}" || exit 0
 git pull --rebase publisher dev
 git push publisher dev
