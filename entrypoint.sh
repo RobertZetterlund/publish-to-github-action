@@ -22,6 +22,6 @@ git lfs install
 git checkout dev
 git add -A
 lastCommit=$(git log -1 --pretty=%B)
-git commit -m "${lastCommit}" || exit 0
+git commit -m "REFORMATTING - ${lastCommit}" || exit 0
 git pull --rebase publisher dev
 git push publisher dev
