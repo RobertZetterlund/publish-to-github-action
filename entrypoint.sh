@@ -19,7 +19,7 @@ git branch --verbose
 git lfs install
 
 # publish any new files
-git checkout master
+git checkout dev
 git add -A
 timestamp=$(date -u)
 git commit -m "Automated publish: ${timestamp} ${GITHUB_SHA}" || exit 0
